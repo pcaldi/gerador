@@ -1,12 +1,14 @@
+import React from 'react';
+
 import { config } from '@gluestack-ui/config';
 import { GluestackUIProvider } from '@gluestack-ui/themed';
-import { Home } from './src/screen/Home';
+import { Routes } from './src/routes';
 
 
 export default function App() {
   return (
     <GluestackUIProvider config={config}>
-      <Home />
+      <Routes />
     </GluestackUIProvider>
   );
 }
