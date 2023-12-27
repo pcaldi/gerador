@@ -1,11 +1,10 @@
+import React, { useRef, useState } from 'react'
+
 import { VStack, Text, Image, Slider, Center, SliderTrack, SliderFilledTrack, SliderThumb, Button, ButtonText, Modal } from '@gluestack-ui/themed'
-import { useRef, useState } from 'react'
+
 import { ModalPassword } from '../components/ModalPassword';
 
-
-
 const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#*';
-
 
 export function Home() {
   const [size, setSize] = useState(10);
@@ -32,7 +31,6 @@ export function Home() {
     <VStack justifyContent='center' alignItems='center' gap="$6" flex={1} backgroundColor='$amber50'>
       <Image size='xl' source={require('../assets/lock-1.png')} alt='Image' />
 
-
       <Text fontSize="$4xl" p="$10" fontWeight='$bold'>{size} caracteres</Text>
 
       <Center w="$5/6" bg='$amber100' p="$5" borderRadius="$lg">
@@ -55,14 +53,9 @@ export function Home() {
         <ButtonText fontSize="$2xl" p="$4">Gerar Senha</ButtonText>
       </Button>
 
-
-
       <Modal isOpen={modalVisible} finalFocusRef={ref}>
         <ModalPassword password={passwordValue} handleClose={closeModal} />
       </Modal>
-
-
-
 
 
     </VStack>
