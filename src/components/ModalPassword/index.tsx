@@ -1,3 +1,6 @@
+import React from "react";
+import { Alert } from "react-native";
+import * as Clipboard from "expo-clipboard"
 
 import { Button, ButtonText, Center, Heading, ModalBackdrop, ModalContent, ModalFooter, ModalHeader, Pressable, Text } from "@gluestack-ui/themed";
 
@@ -8,6 +11,15 @@ export type ModalProps = {
 
 export function ModalPassword({ password, handleClose }: ModalProps) {
 
+  async function handleCopyPassword() {
+    await Clipboard.setStringAsync(password)
+    Alert.alert("Senha Copiada!");
+
+    handleClose();
+  }
+
+
+
   return (
     <Center flex={1} w="$full" >
       <ModalBackdrop />
@@ -15,7 +27,7 @@ export function ModalPassword({ password, handleClose }: ModalProps) {
         <ModalHeader >
           <Heading size="xl">Password</Heading>
         </ModalHeader>
-        <Pressable w="$4/5" alignItems="center" justifyContent="center" bg="$secondary900" p="$1" borderRadius="$lg">
+        <Pressable w="$4/5" alignItems="center" justifyContent="center" bg="$secondary900" p="$1" borderRadius="$lg" onLongPress={handleCopyPassword} >
           <Text size="lg" color="$white">{password}</Text>
         </Pressable>
 
