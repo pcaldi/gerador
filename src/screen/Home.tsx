@@ -1,12 +1,31 @@
-import { VStack, Text, Image, Slider, Center, SliderTrack, SliderFilledTrack, SliderThumb, Button, ButtonText } from '@gluestack-ui/themed'
-import { useState } from 'react'
+import { VStack, Text, Image, Slider, Center, SliderTrack, SliderFilledTrack, SliderThumb, Button, ButtonText, Modal } from '@gluestack-ui/themed'
+import { useRef, useState } from 'react'
+import { ModalPassword } from '../components/ModalPassword';
+
+
+
+const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#*';
 
 
 export function Home() {
   const [size, setSize] = useState(10);
+  const [passwordValue, setPasswordValue] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
+  const ref = useRef(null);
 
   function generatedPassword() {
-    console.log("Clicou")
+    let password = '';
+    for (let i = 0, n = charset.length; i < size; i++) {
+      password += charset.charAt(Math.floor(Math.random() * n))
+    }
+    setPasswordValue(password);
+
+    setModalVisible(true);
+
+  }
+
+  function closeModal() {
+    setModalVisible(false);
   }
 
   return (
@@ -32,9 +51,20 @@ export function Home() {
         </Slider>
       </Center>
 
-      <Button w="$5/6" h="$16" bg='$primary900' $active-bgColor='$primary800' borderRadius="$lg" mt="$6" onPress={generatedPassword}>
+      <Button w="$5/6" h="$16" bg='$primary900' $active-bgColor='$primary800' borderRadius="$lg" mt="$6" onPress={generatedPassword} ref={ref}>
         <ButtonText fontSize="$2xl" p="$4">Gerar Senha</ButtonText>
       </Button>
+
+
+
+      <Modal isOpen={modalVisible} finalFocusRef={ref}>
+        <ModalPassword password={passwordValue} handleClose={closeModal} />
+      </Modal>
+
+
+
+
+
     </VStack>
   )
 }
