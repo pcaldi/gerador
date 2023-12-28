@@ -30,8 +30,6 @@ export function ModalPassword({ password, handleClose }: ModalProps) {
   }
 
 
-
-
   return (
     <Center flex={1} w="$full" >
       <ModalBackdrop />
