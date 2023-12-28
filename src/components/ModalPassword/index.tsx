@@ -2,6 +2,8 @@ import React from "react";
 import { Alert } from "react-native";
 import * as Clipboard from "expo-clipboard"
 
+import useStorage from "../../hooks/useStorage";
+
 import { Button, ButtonText, Center, Heading, ModalBackdrop, ModalContent, ModalFooter, ModalHeader, Pressable, Text } from "@gluestack-ui/themed";
 
 export type ModalProps = {
@@ -11,12 +13,22 @@ export type ModalProps = {
 
 export function ModalPassword({ password, handleClose }: ModalProps) {
 
+  const { saveItem } = useStorage();
+
   async function handleCopyPassword() {
     await Clipboard.setStringAsync(password)
     Alert.alert("Senha Copiada!");
-
+    await saveItem("@pass", password);
     handleClose();
   }
+
+  async function handleCopyStoragePassword() {
+
+    Alert.alert("Senha salva com sucesso!");
+    await saveItem("@pass", password);
+    handleClose();
+  }
+
 
 
 
@@ -37,7 +49,7 @@ export function ModalPassword({ password, handleClose }: ModalProps) {
             <ButtonText color="$primary900">Voltar</ButtonText>
           </Button>
 
-          <Button bg="$primary900" $active-bg="$primary800">
+          <Button bg="$primary900" $active-bg="$primary800" onPress={handleCopyStoragePassword}>
             <ButtonText >Salvar Senha</ButtonText>
           </Button>
 
