@@ -4,8 +4,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Home } from '../screen/Home';
 import { Passwords } from '../screen/Passwords';
+import { HomeIcon, LockKeyhole } from 'lucide-react-native';
+
 
 const { Navigator, Screen } = createBottomTabNavigator();
+
 
 export function AppRoutes() {
   return (
@@ -13,10 +16,28 @@ export function AppRoutes() {
       <Screen
         name='home'
         component={Home}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: ({ color, size }) => {
+            return (
+              <HomeIcon color={color} size={size} />
+            )
+          }
+        }}
       />
       <Screen
         name='passwords'
         component={Passwords}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: ({ color, size }) => {
+            return (
+              <LockKeyhole color={color} size={size} />
+            )
+
+
+          }
+        }}
       />
 
     </Navigator>
