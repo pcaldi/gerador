@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-import { VStack, Text, Image, Slider, Center, SliderTrack, SliderFilledTrack, SliderThumb, Button, ButtonText, Modal } from '@gluestack-ui/themed'
+import { VStack, Text, Image, Slider, Center, SliderTrack, SliderFilledTrack, SliderThumb, Button, ButtonText, Modal, Heading } from '@gluestack-ui/themed'
 
 import { ModalPassword } from '../components/ModalPassword';
 
@@ -31,7 +31,7 @@ export function Home() {
     <VStack justifyContent='center' alignItems='center' gap="$6" flex={1} backgroundColor='$amber50'>
       <Image size='xl' source={require('../assets/lock-1.png')} alt='Image' />
 
-      <Text fontSize="$4xl" p="$10" fontWeight='$bold'>{size} caracteres</Text>
+      <Heading size="3xl" p="$10">{size} caracteres</Heading>
 
       <Center w="$5/6" bg='$amber100' p="$5" borderRadius="$lg">
         <Slider
