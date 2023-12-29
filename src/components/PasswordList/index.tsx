@@ -29,7 +29,7 @@ export function PasswordList({ data, removePassword }: PasswordListProps) {
         {showPassword ? data : '*'.repeat(data.length)}
       </Text>
 
-      <Pressable onPress={togglePasswordVisibility} m="$2">
+      <Pressable onPress={togglePasswordVisibility}>
         {showPassword ? <Eye width={20} height={20} color="black" /> : <EyeOff width={20} height={20} color="black" />}
       </Pressable>
     </Pressable>
