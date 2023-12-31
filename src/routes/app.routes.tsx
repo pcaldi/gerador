@@ -11,6 +11,7 @@ const { Navigator, Screen } = createBottomTabNavigator();
 
 
 export function AppRoutes() {
+
   return (
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen
@@ -22,7 +23,8 @@ export function AppRoutes() {
             return (
               <HomeIcon color={color} size={size} />
             )
-          }
+          },
+
         }}
       />
       <Screen
