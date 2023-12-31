@@ -4,8 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Home } from '../screen/Home';
 import { Passwords } from '../screen/Passwords';
-import { HomeIcon, LockKeyhole } from 'lucide-react-native';
-
+import { Ionicons } from "@expo/vector-icons"
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -19,12 +18,14 @@ export function AppRoutes() {
         component={Home}
         options={{
           tabBarShowLabel: false,
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ focused, size }) => {
             return (
-              <HomeIcon color={color} size={size} />
+              focused ? <Ionicons name="ios-home" size={size} color="#002851" /> : <Ionicons name="ios-home-outline" size={size} color="#737373" />
             )
           },
-
+          tabBarStyle: {
+            backgroundColor: '#fffbeb',
+          }
         }}
       />
       <Screen
@@ -32,12 +33,13 @@ export function AppRoutes() {
         component={Passwords}
         options={{
           tabBarShowLabel: false,
-          tabBarIcon: ({ color, size }) => {
+          tabBarIcon: ({ focused, size }) => {
             return (
-              <LockKeyhole color={color} size={size} />
+              focused ? <Ionicons name="ios-lock-closed" size={size} color="#002851" /> : <Ionicons name="ios-lock-closed-outline" size={size} color="#737373" />
             )
-
-
+          },
+          tabBarStyle: {
+            backgroundColor: '#fffbeb',
           }
         }}
       />
