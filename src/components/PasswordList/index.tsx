@@ -17,7 +17,7 @@ export function PasswordList({ data, removePassword }: PasswordListProps) {
 
   const renderRightActions = () => {
     return (
-      <View justifyContent="center" alignContent="center" bgColor="$amber100" p="$1" >
+      <View justifyContent="center" alignContent="center" bgColor="$amber50" p="$1" >
         <Button bg="$red600" onPress={removePassword} h="$12" $active-bgColor='$red400'   >
           <ButtonIcon as={TrashIcon} w="$6" h="$6" color="$white" p="$4" m="$1" />
         </Button>
@@ -31,7 +31,7 @@ export function PasswordList({ data, removePassword }: PasswordListProps) {
         bg="$primary900"
         p="$3"
         borderRadius="$md"
-        m="$2.5"
+        m="$3"
         alignItems="center"
         justifyContent="space-between"
         flexDirection="row"

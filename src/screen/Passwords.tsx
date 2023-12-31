@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 import { Heading, Center, FlatList, View } from "@gluestack-ui/themed";
 import { useIsFocused } from "@react-navigation/native";
-import { SafeAreaView } from "react-native-safe-area-context";
+
 
 import useStorage from "../hooks/useStorage";
 import { PasswordList } from "../components/PasswordList";
@@ -32,15 +32,16 @@ export function Passwords() {
 
   return (
 
-    <View bg="$amber100" h={"100%"}>
+    <View bg="$amber50" h={"100%"} pb="$3.5">
       <Center bg="$primary900" h="$40">
         <Heading color="$white" size="3xl">Minhas Senhas</Heading>
       </Center>
       <FlatList
-        pt="$6"
+        p="$3.5"
         data={listPassword}
         keyExtractor={(item) => String(item)}
         renderItem={({ item }) => <PasswordList data={item as string} removePassword={() => handleRemovePassword(item as string)} />}
+        showsVerticalScrollIndicator={false}
       />
     </View>
 
