@@ -38,6 +38,28 @@ O Gerador de Senhas Aleatórias é uma aplicação simples e eficiente para cria
 </div>
 
 ---
+## ✔️ Pré-requisitos
+
+Para conseguir seguir este README e rodar o projeto você  precisa dos seguintes itens:
+- Git para clonar o projeto e acessar as branches. Você pode instalar [aqui](https://git-scm.com/downloads);
+- Node para podermos rodar `expo` e `npm`. Você pode instala-lo [aqui](https://nodejs.org/en/);
+- Um celular Android ou iOS com o aplicativo Expo instalado, ou então algum simulador Android ou iOS no computador;
+
+Se quiser testar as instalações, rodar os comandos abaixo separadamente deve mostrar as respectivas versões.
+
+```
+git --version
+node --version
+npm --version
+```
+
+Então com o `npm` instalado podemos instalar o `expo` e checar a versão:
+```
+npm install --global expo-cli
+expo --version
+```
+
+---
 
 ## 🛞 Rodando o projeto
 
