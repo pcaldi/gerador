@@ -1,32 +1,79 @@
-This is a [Next.js](https://github.com/expo/expo) + [Gluestack-ui](https://ui.gluestack.io/) project template bootstrapped with [`create-expo-app`](https://docs.expo.dev/get-started/create-a-project/).
+<h1 align="center">
+    🔐 Gerador de Senhas
+</h1>
 
-## Getting Started
+---
 
-First, run the development server:
+## 📝 Projeto
+O Gerador de Senhas Aleatórias é uma aplicação simples e eficiente para criar senhas seguras e aleatórias. Esta ferramenta é projetada para ajudar usuários a gerar senhas fortes, contribuindo para uma maior segurança online.
+
+---
+
+## 📱 Funcionalidades Principais
+- Geração Aleatória de Senhas: Crie senhas seguras e aleatórias com um clique.
+- Configurações Personalizadas: Escolha o comprimento da senha e inclua diferentes tipos de caracteres (letras maiúsculas, minúsculas, números e caracteres especiais).
+- Visualização Instantânea: Visualize a senha gerada antes de copiá-la para a área de transferência.
+- Histórico de Senhas: Mantenha um histórico das últimas senhas geradas para referência rápida.
+
+---
+
+##  ⚙️ Tecnologias Utilizadas
+* [React Native](https://reactnative.dev/)
+* [GlueStack-ui](https://gluestack.io/)
+* [Expo](https://expo.dev/)
+* [Typescript](https://www.typescriptlang.org/)
+* [Gesture-Handler](https://docs.expo.dev/versions/latest/sdk/gesture-handler/)
+* [Splash Screen](https://docs.expo.dev/guides/splash-screens/)
+* [AsyncStorage](https://docs.expo.dev/versions/latest/sdk/async-storage/)
+* [Clipboard](https://www.npmjs.com/package/@react-native-clipboard/clipboard)
+* [React Navigation](https://reactnavigation.org/)
+
+---
+
+## 🎬 Demo
+
+
+<div align="center" >
+   <img height="600" src="./.github/rentx.gif"/>
+</div>
+
+---
+
+## 🛞 Rodando o projeto
 
 ```bash
-# For web
-yarn web
-# For ios
-yarn ios
-# For android
-yarn android
+# Clone este repositório
+$ git clone git@github.com:pcaldi/gerador.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd RentX
+
+# Instale as dependências
+$ npm install
+# Caso prefira usar o Yarn execute o comando abaixo
+$ yarn
+
+# Execute a API da aplicação feita com JSON Server
+$ npm run api
+
+# Execute a aplicação no emulador android
+$ npm android
+
+# Execute a aplicação no emulador iOS
+$ npm ios
 ```
+---
 
-You can start editing the page by modifying `App.tsx`. The page auto-updates as you edit the file.
+## 🦸 Autor
 
-This project uses [`@gluestack-ui`](https://ui.gluestack.io/docs/overview/introduction) library that provides optionally styled and accessible components. These components are designed for easy integration into applications developed with React and React Native.
+<a href="https://github.com/pcaldi">
+ <img style="border-radius: 50%;" src="https://github.com/pcaldi.png" width="100px;" alt=""/>
+ <br />
+ <sub><b>Paulo Caldi</b></sub></a> <a href="https://github.com/pcaldi" title="Rocketseat">🚀</a>
+ <br />
+
+[![Linkedin Badge](https://img.shields.io/badge/-Paulo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/pcaldi/)](https://www.linkedin.com/in/pcaldi/)
+[![Gmail Badge](https://img.shields.io/badge/-pcaldi@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pcaldi@gmail.com)](mailto:pcaldi@gmail.com)
 
 
-## Learn More
 
-To learn more about Expo + Gluestack UI template, take a look at the following resources:
-
-- [Expo Documentation](https://github.com/expo/expo) - learn about Expo features and API.
-- [Gluestack UI Documenatation](https://ui.gluestack.io/docs/overview/introduction) - learn about core concepts and architecture of gluestack-ui.
-- [Gluestack Style Documentaion](https://style.gluestack.io/docs/overview/introduction) - learn about the universal styling library that is used in Gluestack-ui
-
-You can check out:
-- [the gluestack-ui GitHub repository](https://github.com/gluestack/gluestack-ui)
-- [the gluestack-style GitHub repository](https://github.com/gluestack/gluestack-style)
-Your feedback and contributions are welcome!
