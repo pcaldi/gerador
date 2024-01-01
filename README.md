@@ -34,7 +34,7 @@ O Gerador de Senhas Aleatórias é uma aplicação simples e eficiente para cria
 
 
 <div align="center" >
-   <img height="600" src="./.github/rentx.gif"/>
+   <img height="600" src="./.github/demo.gif"/>
 </div>
 
 ---
@@ -46,21 +46,16 @@ O Gerador de Senhas Aleatórias é uma aplicação simples e eficiente para cria
 $ git clone git@github.com:pcaldi/gerador.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd RentX
+$ cd gerador
 
 # Instale as dependências
 $ npm install
 # Caso prefira usar o Yarn execute o comando abaixo
-$ yarn
+$ yarn add
 
 # Execute a API da aplicação feita com JSON Server
-$ npm run api
+$ npx expo start
 
-# Execute a aplicação no emulador android
-$ npm android
-
-# Execute a aplicação no emulador iOS
-$ npm ios
 ```
 ---
 
