@@ -34,7 +34,7 @@ O Gerador de Senhas Aleatórias é uma aplicação simples e eficiente para cria
 
 
 <div align="center" >
-   <img height="600" src="./.github/demo.gif"/>
+   <img height="600" src="./.github/tela.gif"/>
 </div>
 
 ---
